@@ -1,0 +1,7 @@
+services:
+  pdf-converter:
+    container_name: ${PROJECT_NAME?PROJECT_NAME must be set.}-engine
+    build: ./
+    volumes:
+      - ./app/uploads:/app/uploads
+      - ./app/output:/app/output
